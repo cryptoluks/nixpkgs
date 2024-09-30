@@ -63,6 +63,7 @@ buildFHSEnv {
       cairo
       cups
       dbus
+      exiftool
       expat
       glib
       gtk3
