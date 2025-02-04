@@ -68,13 +68,6 @@ stdenv'.mkDerivation (finalAttrs: {
       else
         "";
     fetchSubmodules = true;
-
-    # Remove v2 dashboard distributed under NCUL1. Make sure an empty
-    # Makefile.am exists, as autoreconf will get confused otherwise.
-    postFetch = lib.optionalString (!withCloudUi) ''
-      rm -rf $out/src/web/gui/v2/*
-      touch $out/src/web/gui/v2/Makefile.am
-    '';
   };
 
   strictDeps = true;
