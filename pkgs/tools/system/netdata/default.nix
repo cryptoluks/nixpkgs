@@ -63,7 +63,7 @@ stdenv'.mkDerivation (finalAttrs: {
     rev = "v${finalAttrs.version}";
     hash =
       if withCloudUi then
-        ""
+        "sha256-DK+4FXwEn9xvhaL5LHX45bu/QsnT/hrzmfF6sLNV70s="
       # we delete the v2 GUI after fetching
       else
         "";
