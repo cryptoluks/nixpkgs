@@ -54,7 +54,7 @@ let
   stdenv' = if stdenv.hostPlatform.isDarwin then overrideSDK stdenv "11.0" else stdenv;
 in
 stdenv'.mkDerivation (finalAttrs: {
-  version = "1.47.5";
+  version = "2.2.3";
   pname = "netdata";
 
   src = fetchFromGitHub {
